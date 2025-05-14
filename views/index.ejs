@@ -1,0 +1,40 @@
+<html>
+  
+  <head>
+  </head>
+  <body>
+    <h1>Bienvenido a la plataforma Trailerflix 🎬</h1>
+    <p>Tu catálogo de series y películas</p>
+  
+    <a href="/catalogo">Ver catálogo completo</a>
+  
+    <h2>Buscar por título</h2>
+    <form action="/titulo/" method="get" onsubmit="event.preventDefault(); window.location.href='/titulo/' + document.getElementById('tituloInput').value;">
+      <input type="text" id="tituloInput" placeholder="Ingresá un título">
+      <button type="submit">Buscar</button>
+    </form>
+  
+    <h2>Buscar por categoría</h2>
+<form action="/categoria/" method="get" onsubmit="event.preventDefault(); window.location.href='/categoria/' + document.getElementById('catSelect').value;">
+  <select id="catSelect">
+    <option value="Película">Películas</option>
+    <option value="Serie">Series</option>
+  </select>
+  <button type="submit">Buscar</button>
+</form>
+
+  
+    <h2>Buscar por reparto</h2>
+    <form action="/reparto/" method="get" onsubmit="event.preventDefault(); window.location.href='/reparto/' + document.getElementById('repartoInput').value;">
+      <input type="text" id="repartoInput" placeholder="Ingresá un actor o actriz">
+      <button type="submit">Buscar</button>
+    </form>
+  
+    <h2>Buscar por ID del trailer</h2>
+    <form action="/trailer/" method="get" onsubmit="event.preventDefault(); window.location.href='/trailer/' + document.getElementById('trailerInput').value;">
+      <input type="number" id="trailerInput" placeholder="Ingresá un ID numérico">
+      <button type="submit">Ver trailer</button>
+    </form>
+  </body>
+  </html>
+  
